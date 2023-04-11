@@ -237,14 +237,10 @@ end
 
 local UIS = game:GetService("UserInputService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Remotes = game:GetService("ReplicatedStorage"):WaitForChild("Remotes")
+local Remote = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):GetChildren()[49]
 
 function SetBoothText(Text)
-	for _, Remote in pairs(Remotes:GetChildren()) do
-		pcall(function()
-			Remote:FireServer(Text, "booth")
-		end)
-	end
+	Remote:FireServer(Text, "booth")
 end
 
 local SokobanGame = Sokoban.new()
