@@ -1,3 +1,5 @@
+if _G.sokoban ~= nil then warn("sokoban game already running") end
+_G._sokoban_running = true
 local Sokoban = {}
 
 local RNG = Random.new()
