@@ -285,7 +285,6 @@ end)
 task.wait(1)
 task.spawn(function()
 	while GameRunning == true do
-		game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("WELCOME TO SOKOBAN IN ROBLOX! YOUR GOAL IS TO GET ALL OF THE BOXES AT THE RANDOMLY PLACES X'S TYPE W, A, S OR D IN CHAT TO CONTROL THE GAME","All")
 		SokobanGame:Update()
 		SetBoothText(SokobanGame.GameCanvas)
 		task.wait()
